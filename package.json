@@ -1,0 +1,20 @@
+{
+  "name": "router5-url-issue",
+  "version": "0.0.1",
+  "description": "Web app that shows the problem reported in https://github.com/router5/router5/issues/248",
+  "main": "router5-url-issue.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "router5": "^5.8.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "browserify": "^16.1.0",
+    "gulp": "^4.0.0",
+    "gulp-rename": "^1.2.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0",
+    "watchify": "^3.10.0"
+  }
+}
