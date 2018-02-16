@@ -35,7 +35,7 @@ router.usePlugin(loggerPlugin);
 
 router.usePlugin(listenersPlugin());
 
-router.usePlugin(browserPlugin({ useHash: false, mergeState: true }));
+router.usePlugin(browserPlugin({ useHash: false }));
 
 router.addListener(function(toState, fromState)
 {

@@ -12,15 +12,13 @@
 		<h2>https://github.com/router5/router5/issues/248</h2>
 
 		<br>
-		<br>
 
 		<p>You should be now in http://localhost:3000/Microsoft (so router5 matched the "company" route).</p>
 
-		<p>Open the browser console. You have window.ROUTER poiniting to the router instance.</p>
+		<p>Open the browser console to see some logs. Also, window.ROUTER points to the router instance.</p>
 
 		<p>Now if you click on the following links, you should also remain in http://localhost:3000/Microsoft. However, due issue 248, router5 will not match some of the links below (3 and 4) and will move to the default route http://localhost:3000/default-route-company instead.</p>
 
-		<br>
 		<br>
 
 		<p>1) <a href='http://localhost:3000/Microsoft'>http://localhost:3000/Microsoft</a></p>
@@ -31,5 +29,25 @@
 		<p>6) <a href='http://localhost:3000/Microsoft/login/'>http://localhost:3000/Microsoft/login/</a></p>
 		<p>7) <a href='http://localhost:3000/Microsoft/login?foo=123&bar=456'>http://localhost:3000/Microsoft/login?foo=123&bar=456</a></p>
 		<p>8) <a href='http://localhost:3000/Microsoft/login/?foo=123&bar=456'>http://localhost:3000/Microsoft/login/?foo=123&bar=456</a></p>
+
+		<br>
+
+		<p>Ok, so links 3) and 4) did not work (they moved you to http://localhost:3000/default-route-company). Let's try 3) via API. Run in the console:</p>
+
+		<code>
+			ROUTER.matchPath('/Microsoft?foo=123&bar=456')
+		</code>
+
+		<p>Oh, it DOES match the "company" route, but it didn't when directly open the link 3) above!</p>
+
+		<br>
+
+		<p>Now let's try 4) via API:</p>
+
+		<code>
+			ROUTER.matchPath('/Microsoft/?foo=123&bar=456')
+		</code>
+
+		<p>It matches no route. No idea why not.</p>
 	</body>
 </html>
