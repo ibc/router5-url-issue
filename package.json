@@ -6,7 +6,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "router5": "^5.8.2"
+    "router5": "^6.0.0"
   },
   "devDependencies": {
     "browser-sync": "^2.23.6",

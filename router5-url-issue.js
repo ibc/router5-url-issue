@@ -26,9 +26,8 @@ const router = createRouter(
 		{
 			company : 'default-route-company'
 		},
-		trailingSlash     : true,
-		useTrailingSlash  : false,
-		strictQueryParams : false
+		trailingSlashMode : 'default',
+		queryParamsMode   : 'loose'
 	});
 
 router.usePlugin(loggerPlugin);
